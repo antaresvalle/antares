@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+  }
+  .App {
+    text-align: center;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 100vh;
+    padding-top: 30vh;
+    color: white;
+    
+  }
+
+  .content{
+      margin-top: 15rem;
+  }
+  .content, p, h1, hr{
+      z-index: 0;
+      text-transform: uppercase;
+  }
+
+  .sub {
+      letter-spacing: 0.2em;
+  }
+  
+  nav{
+    background: transparent;
+  }
+  
+  .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  .vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    height: 100%;
+    left: 2rem;
+    z-index: 3;
+    
+  }
+  /* ol, ul {
+    list-style: none;
+    height: 80%;
+    left: 1rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
+  } */
+  
+  .verticalLine {
+    height: calc(50% - 0.625rem);
+      left: 0.55rem;
+      width: 2px;
+      position: absolute;
+      background-color: rgba(254,254,254,0.5);
+  }
+  
+  
+  .App-title {
+    font-size: 4em;
+    letter-spacing: 0.1em;
+  }
+  
+  .App-intro {
+    font-size: 36px;
+    padding: 3rem 2rem;
+  }
+
+  h2 span {
+      font-weight: 700;
+  }
+  
+  hr {
+    width: 15rem;
+  }
+  
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  section {
+    height: 100vh;
+  }
+  
+  .Work {
+    background-color: #6aa9abff;
+  }
+  
+  /* .Contact {
+    background-color: #cdb0b8ff;
+  } */
+  
+  div .about-half {
+      width: 50%;
+      /* border: 1px solid; */
+      position: relative;
+      height: 100%;
+      top: 0;
+      float: left;
+      background-color: #343434;/*#3a3a3aff*/
+  }
+  
+  div.about-half img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 60px;
+}
+
+  .about-half.right {
+      width: 50%;
+    background-color: #fff;
+    padding: 3rem;
+  }
+
+  .about-text {
+      text-transform: none;
+      font-size: 1.5em;
+  }
+  .intests{
+      text-transform: none;
+      padding: 2rem;
+      margin-top: 5rem;
+      font-size: 1.2em;
+  }
+
+strong {
+    font-weight: 700 !important;
+}
+  
+  div .three-quarters {
+    width: 70%;
+    float: left;
+    position: relative;
+    height: 100%;
+    background-color: #cdb0b8ff;
+    text-align: right;
+    padding: 2rem;
+  }
+.contact-links {
+    width: 10%;
+    text-align: right;
+    margin: 2rem;
+}
+
+  ul#sideNavigation {
+    height: 80%;
+    left: 2rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
+}
+
+ul#sideNavigation>li.navigationItem {
+    width: 100%;
+    position: relative;
+    height: calc(100% / 5);
+    cursor: pointer;
+}
+
+ul#sideNavigation>li.navigationItem>div.verticalLine.top {
+    top: 0;
+}
+
+ul#sideNavigation>li.navigationItem>div.verticalLine {
+    height: calc(50% - 0.625rem);
+    left: 0.55rem;
+    width: 2px;
+    position: absolute;
+    background-color: rgba(254,254,254,0.5);
+}
+
+ul#sideNavigation>li.navigationItem>div.verticalLine.bottom {
+    bottom: 0;
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.hexagonContainer {
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 1rem;
+    opacity: 0.5;
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.hexagonContainer>.inlineSVG {
+    height: 100%;
+    top: 0;
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.hexagonContainer svg.hexagon {
+    width: 100%;
+    height: 100%;
+    /* -webkit-transition: all 0.35s ease-in-out; */
+    transition: all 0.35s ease-in-out;
+    -webkit-transform: rotate(0deg) scale(1, 1);
+    -ms-transform: rotate(0deg) scale(1, 1);
+    /* transform: rotate(0deg) scale(1, 1); */
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.hexagonContainer svg.hexagon path.hexagon {
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    stroke: #FEFEFE;
+    fill: transparent;
+    stroke-width: 2px;
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.titleContainer {
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    /* opacity: 0; */
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.titleContainer>span {
+    /* font-family: "Humanst521 BT"; */
+    font-weight: normal;
+    font-size: 0.75rem;
+    color: #FEFEFE;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+}
+
+/* flecha */
+
+@media (min-width: 600px){
+    div.downArrowContainer {
+        -webkit-animation: downArrowFadeIn 8s ease-in-out forwards;
+        animation: downArrowFadeIn 8s ease-in-out forwards;
+    }
+     div.downArrowContainer div.inlineSVG {
+        -webkit-animation: arrowRepeatingAnimation 2s infinite ease-in-out forwards;
+        animation: arrowRepeatingAnimation 2s infinite ease-in-out forwards;
+    }
+}
+
+@keyframes downArrowFadeIn{
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(2rem);
+        transform: translateY(2rem);
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translateY(2rem);
+        transform: translateY(2rem);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrowRepeatingAnimation{
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(1.25rem);
+        transform: translateY(1.25rem);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.downArrowContainer div.inlineSVG {
+    width: 75px;
+    display: inline-block;
+}
+
+.downArrowContainer {
+    display: block;
+    bottom: 30px;
+    position: absolute;
+    text-align: center;
+    z-index: 15;
+    width: 100%;
+    cursor: pointer;
+}
+
+.downArrowContainer div.inlineSVG svg#downArrow {
+    fill: none;
+    stroke: #FEFEFE;
+    /* stroke-width: 4px; */
+}
+
+div.inlineSVG svg {
+    width: 100%;
+}
+
+svg:not(:root), symbol, image, marker, pattern, foreignObject {
+    overflow: hidden;
+}
+
+/* Stars */
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
