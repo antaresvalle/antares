@@ -1,51 +1,32 @@
+/* ------------------------------  GENERAL  ------------------------------ */
 * {
     box-sizing: border-box;
   }
-  .App {
+  /* .app {
     text-align: center;
-  }
+  } */
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+section {
+    height: 100vh;
+  }
+
+/*  ------------------------------  NAV  ------------------------------ */
+nav{
+    background: transparent;
 }
   
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-  
-  .App-header {
-    background-color: #222;
-    height: 100vh;
-    padding-top: 30vh;
-    color: white;
-    
-  }
-
-  .content{
-      margin-top: 15rem;
-  }
-  .content, p, h1, hr{
-      z-index: 0;
-      text-transform: uppercase;
-  }
-
-  .sub {
-      letter-spacing: 0.2em;
-  }
-  
-  nav{
-    background: transparent;
-  }
-  
-  .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
     -webkit-box-shadow: none;
     box-shadow: none;
-  }
+}
   
-  .vertical-nav {
+.vertical-nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -55,124 +36,26 @@ body {
     height: 100%;
     left: 2rem;
     z-index: 3;
-    
-  }
-  /* ol, ul {
     list-style: none;
-    height: 80%;
-    left: 1rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: relative;
-  } */
+}
   
-  .verticalLine {
+.verticalLine {
     height: calc(50% - 0.625rem);
       left: 0.55rem;
       width: 2px;
       position: absolute;
       background-color: rgba(254,254,254,0.5);
-  }
-  
-  
-  .App-title {
-    font-size: 4em;
-    letter-spacing: 0.1em;
-  }
-  
-  .App-intro {
-    font-size: 36px;
-    padding: 3rem 2rem;
-  }
-
-  h2 span {
-      font-weight: 700;
-  }
-  
-  hr {
-    width: 15rem;
-  }
-  
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  section {
-    height: 100vh;
-  }
-  
-  .Work {
-    background-color: #6aa9abff;
-  }
-  
-  /* .Contact {
-    background-color: #cdb0b8ff;
-  } */
-  
-  div .about-half {
-      width: 50%;
-      /* border: 1px solid; */
-      position: relative;
-      height: 100%;
-      top: 0;
-      float: left;
-      background-color: #343434;/*#3a3a3aff*/
-  }
-  
-  div.about-half img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    left: 60px;
 }
 
-  .about-half.right {
-      width: 50%;
-    background-color: #fff;
-    padding: 3rem;
-  }
-
-  .about-text {
-      text-transform: none;
-      font-size: 1.5em;
-  }
-  .intests{
-      text-transform: none;
-      padding: 2rem;
-      margin-top: 5rem;
-      font-size: 1.2em;
-  }
-
-strong {
-    font-weight: 700 !important;
-}
-  
-  div .three-quarters {
-    width: 70%;
-    float: left;
-    position: relative;
-    height: 100%;
-    background-color: #cdb0b8ff;
-    text-align: right;
-    padding: 2rem;
-  }
-.contact-links {
-    width: 10%;
-    text-align: right;
-    margin: 2rem;
-}
-
-  ul#sideNavigation {
+ul#sideNavigation {
     height: 80%;
-    left: 2rem;
+    /* left: 2rem; */
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     position: relative;
+    opacity: 0;
 }
 
 ul#sideNavigation>li.navigationItem {
@@ -180,6 +63,8 @@ ul#sideNavigation>li.navigationItem {
     position: relative;
     height: calc(100% / 5);
     cursor: pointer;
+    list-style: none;
+    
 }
 
 ul#sideNavigation>li.navigationItem>div.verticalLine.top {
@@ -261,6 +146,77 @@ ul#sideNavigation>li.navigationItem>div.innerContainer>div.titleContainer>span {
     letter-spacing: 0.2rem;
     line-height: 1rem;
 }
+ul#sideNavigation>li.navigationItem>div.innerContainer>div.hexagonContainer svg.hexagon path.fill-hexagon {
+    fill: white;
+    /* animation: vortex 1s infinite linear; */
+}
+
+a {
+    color: #ffffff;
+}
+
+ul#sideNavigation.show{
+    opacity: 1;
+    /* animation: menu 3s linear 1s slidein; */
+    transition: all 0.35s ease-in-out;
+}
+
+@keyframes menu {
+
+}
+
+#logo {
+    width: 50%;
+    margin-top: 40%;
+    margin-left: 3rem;
+}
+
+/* ------------------------------  INTRO  ------------------------------ */
+
+#header-container{
+    height: 100vh;
+}
+
+#header-intro {
+    background-color: #222;
+    height: 100%;
+    color: white;
+    position: fixed;
+    
+}
+
+.content-intro{
+    padding: 15% 0;
+    text-align: center;
+}
+  
+hr {
+    width: 15rem;
+}
+
+img#constellation {
+    width: 28%;
+    opacity: 0.3;
+    position: relative;
+    /* position: absolute; */
+    /* bottom: 10vh; */
+    /* margin: 9rem; */
+}
+
+img#constellation.opacity{
+    opacity: 0;
+}
+
+  #vortex-img {
+    -webkit-animation: vortex 10s infinite linear;
+}
+
+
+
+@keyframes vortex {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
 
 /* flecha */
 
@@ -315,7 +271,7 @@ ul#sideNavigation>li.navigationItem>div.innerContainer>div.titleContainer>span {
 
 .downArrowContainer {
     display: block;
-    bottom: 30px;
+    bottom: 60px;
     position: absolute;
     text-align: center;
     z-index: 15;
@@ -373,8 +329,8 @@ svg:not(:root), symbol, image, marker, pattern, foreignObject {
     to {background-position:10000px 0;}
 }
 
-.stars, .twinkling, .clouds {
-  position:absolute;
+.stars, .twinkling, .constellation {
+  position: fixed;
   top:0;
   left:0;
   right:0;
@@ -384,18 +340,172 @@ svg:not(:root), symbol, image, marker, pattern, foreignObject {
   display:block;
 }
 
+#constellation img {
+    width: 20%;
+    opacity: 0.8;
+
+}
+
 .stars {
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  /* background:#000 url(assets/images/stars.png) repeat top center; */
   z-index:0;
+  /* background-attachment: fixed; */
+}
+
+.constellation {
+    background: url(assets/images/constellation.png) no-repeat center;
+    z-index: 1;
+    opacity: 1;
+    background-size: 10vh;
 }
 
 .twinkling{
   background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index:1;
+  z-index:2;
 
   -moz-animation:move-twink-back 200s linear infinite;
   -ms-animation:move-twink-back 200s linear infinite;
   -o-animation:move-twink-back 200s linear infinite;
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
+  /* background-attachment: fixed; */
 }
+
+
+/* ------------------------------  ABOUT  ------------------------------ */
+
+div.about-content {
+    position: relative;
+    background: linear-gradient(#00000021, #000, #0e163a, #2b42aa, #96adcf);
+    height: 100vh;
+    padding: 2% 20%;
+    color: #FEFEFE;
+}
+
+ h2{
+    color: #fff;
+    font-weight: 100;
+    font-size: 4rem;
+    padding: 0;
+}
+
+div.about-content p {
+    /* color: #DD8522 */
+}
+.sub {
+    letter-spacing: 0.2em;
+}
+
+.intro-title {
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+.App-intro {
+    /* font-size: 36px; */
+    padding: 3rem 2rem;
+}
+
+h2 span {
+      font-weight: 100;
+}
+
+
+/* .content {
+    position: absolute;
+    z-index: 100;
+    left: 30%;
+} */
+
+.about-text {
+    text-transform: none;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+.intests{
+    text-transform: none;
+    padding: 2rem;
+    margin-top: 5rem;
+    /* font-size: 1.2em; */
+}
+
+#about-section .index{
+    /* z-index: 30000; */
+    position: absolute;
+    /* top: 0; */
+    
+}
+
+#desc {
+    background-color: #1a293c;
+    /* padding: 10rem; */
+    text-align: left;
+    color: white;
+}
+
+.ant-profile{
+    width: 20%;
+    opacity: 0.3;
+    text-align: left;
+    height: 90vh;
+}
+
+.icons {
+    font-size: 18px;
+    padding-right: 7px;
+}
+/* ------------------------------  WORK  ------------------------------ */
+
+section.Work {
+    /* background-color: #6aa9abff; */
+    height: 100vh;
+    /* z-index: 10; */
+    position: relative;
+}
+
+section.Work div.work-content{
+    position: relative;
+    background: linear-gradient(#96adcf, #6963a3);
+    height: 100vh;
+    padding: 2% 20%;
+    color: #FEFEFE;
+}
+
+/* ------------------------------  CONTACT  ------------------------------ */
+section.Contact {
+    height: 20vh;
+}
+
+div .contact-content {
+    position: relative;
+    background: linear-gradient(#6963a3, #4b4865);
+    padding: 2% 20%;
+    color: #FEFEFE;
+  }
+
+.contact-links {
+    width: 25%;
+    /* text-align: right; */
+    margin: 2rem;
+}
+
+.links {
+    display: inline-flex;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+
+  .bg-color {
+      /* z-index: 1000; */
+      color: rgb(206, 206, 206);
+  }
+
+strong {
+    font-weight: 700 !important;
+}
+  
