@@ -523,6 +523,12 @@ div.contact-content ul li a:hover {
         padding-right: 10%;
     }
 
+    .project {
+        background-color: rgb(164, 181, 230);
+        width: 30%;
+        display: inline-block;
+    }
+
     .project-desc {
         margin-bottom: 2rem;
         padding: 2rem;
