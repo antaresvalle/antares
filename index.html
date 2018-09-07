@@ -11,24 +11,23 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
     <title>Antares Valle</title>
 </head>
 
 <body>
-    <div class="app" id="bg">
-
-        <!-- ***  INTRO *** -->
-        <div id="header-container">
-            <header id="header-intro">
+    <div>
+        <!-- ***  HERO *** -->
+        <div id="hero">
+            <header id="hero-content">
                 <div class="stars"></div>
-                <div>
-                    <img id="constellation" src="assets/images/constellation.png">
-                </div>
+                <img id="constellation" class="hidden-on-mobile" src="assets/images/constellation.png">
                 <div class="twinkling">
-                    <div class="content-intro">
-                        <h2 class="intro-title">Antares<span>Valle</span></h2>
+                    <div class="intro-text">
+                        <img id="logo" class="hidden-on-desktop mobile" src="assets/images/logo-antares.png">
+                        <h2 class="intro-title">Antares
+                            <span>Valle</span>
+                        </h2>
                         <hr/>
                     </div>
                     <div class="downArrowContainer">
@@ -45,8 +44,8 @@
         </div>
 
         <!-- *** NAV *** -->
-        <div class="vertical-nav">
-            <img id="logo" src="assets/images/logo-antares.png">
+        <div class="vertical-nav hidden-on-mobile">
+            <img id="logo" class="hidden-on-mobile" src="assets/images/logo-antares.png">
             <ul id="sideNavigation">
                 <li class="navigationItem ">
                     <div class="verticalLine top"></div>
@@ -108,44 +107,117 @@
         </div>
 
         <!-- *** ABOUT *** -->
-        <section class="About" id="about-section">
+        <section class="about-section" id="about">
             <div class="about-content">
-                <p>HELLO, I'M</p>
-                <h2>Front-End <span>Software Developer</span></h2>
-                <p class="about-text">I like to learn
-                    <strong>new technologies</strong> and effective ways to
-                    <strong>solve problems</strong>. I have focused my trajectory on
-                    <strong>results</strong> and
-                    <strong>continuous learning</strong>, always placing myself on the side that adds, proposes and
-                    <strong>makes things happen</strong>.</p>
-                    <i class="icon-heart icons"></i>Interests
-            </div>
-            
-            
+                <p class="hi">HELLO, I'M</p>
+                <h2 class="about-title">Front-End
+                    <span>Software Developer</span>
+                </h2>
+                <div class="img-ant-container">
+                    <img id="antares-photo" src="assets/images/av.png">
+                </div>
+                <div class="about-desc">
+                    <p class="about-text">I like to learn
+                        <span>new technologies</span> and effective ways to
+                        <span>solve problems</span>.</p>
+                    <p class="about-text-sub">I have focused my trajectory on
+                        <span>results</span> and
+                        <span>continuous learning</span>, always placing myself on the side that adds, proposes and
+                        <span>makes things happen</span>.</p>
+                    <div class="hidden-on-mobile aditional">
+                        <div class="interests aditional-info">
+                                <i class="icon-heart icons"></i><spam>Interests</spam>
+                                <p>Web Development</p>
+                                <p>Machine Learning</p>
+                                <p>Artificial intelligence</p>
+                                <p>Data Science</p>
+                                <p>Robotics</p>
+                                <p>Drones</p>
+                                <p>Micro-controllers</p>
+                        </div>
+                        <div class="stack aditional-info">
+                                <i class="icon-settings icons"></i><span>Stack</span>
+                                <p>JS / HTML5 / CSS3 </p>
+                                <p>Vue JS</p>
+                                <p>React</p>
+                                <p>jQuery</p>
+                                <p>git / GitHub</p>
+                                <p>Bootstrap & Materialize</p>
+                                <p>node js</p>
+                                <p>Mocha</p>
+                                <p>Wordpress</p>
 
-        </section>
-        <!-- *** WORK *** -->
-        <section class="Work">
-            <div class="work-content">
-                <h2>I like to code</h2>
+                        </div>
+                        <div class="stack aditional-info">
+                                <i class="icon-star icons"></i><span>Skills</span>
+                                <p>I generate quick changes based on the feedback received.</p>
+                                <p>Good communication.</p>
+                                <p>Critical and logical thinking.</p>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- *** WORK *** -->
+        <section id="work">
+            <div class="work-content">
+                <h2 class="code-title">I like to code</h2>
+                <div class="project">
+                    <div class="img-project e-commerce"></div>
+                    <div class="project-desc">
+                        <a href="#" class="project-title">E-commerce Juegos</a>
+                        <p>SPA using the API of Mercado Libre and PayPal.</p>
+                        <a class="project-btn" href="https://antaresvalle.github.io/e-commerce" target="_blank">Live Demo</a>
+                        <a class="project-btn" href="https://github.com/antaresvalle/e-commerce" target="_blank">Open repo</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img-project getting-links"></div>
+                    <div class="project-desc">
+                        <a href="#" class="project-title">Links from Markdown</a>
+                        <p>Module that extracts all the links founded in a Markdown file.</p>
+                        <a class="project-btn" href="https://antaresvalle.github.io/gettingLinksFromMarkdown" target="_blank">Live Demo</a>
+                        <a class="project-btn" href="https://github.com/antaresvalle/gettingLinksFromMarkdown" target="_blank">Open repo</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="img-project data-dashboard"></div>
+                    <div class="project-desc">
+                        <a href="#" class="project-title">Data Dashboard Laboratoria</a>
+                        </br>
+                        <a class="project-btn" href="https://antaresvalle.github.io/data-dashboard" target="_blank">Live Demo</a>
+                        <a class="project-btn" href="https://github.com/antaresvalle/data-dashboard" target="_blank">Open repo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- *** CONTACT *** -->
-        <section class="Contact">
+        <section id="contact">
             <div class="contact-content">
-                <ul class="links">
+                <ul class="contact-links">
                     <li>
-                        <img class="contact-links" src="assets/images/github.png">
+                        <a href="https://github.com/antaresvalle" target="_blank">
+                            <img class="cont-link" src="assets/images/github.png">
+                        </a>
                     </li>
                     <li>
-                        <img class="contact-links" src="assets/images/twitter.png">
+                        <a href="https://www.linkedin.com/in/antares-valle/" target="_blank">
+                            <img class="cont-link" src="assets/images/linkedin.png">
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://medium.com/@antaresvalle" target="_blank">
+                            <img class="cont-link" src="assets/images/medium.png">
+                        </a>
                     </li>
                     <li>
-                        <img class="contact-links" src="assets/images/medium.png">
-                    </li>
-                    <li>
-                        <img class="contact-links" src="assets/images/linkedin.png">
-                    </li>
+                        <a href="https://twitter.com/antares_valle" target="_blank">
+                            <img class="cont-link" src="assets/images/twitter.png">
+                        </a>
+                    </li> -->
                 </ul>
             </div>
             <div></div>
